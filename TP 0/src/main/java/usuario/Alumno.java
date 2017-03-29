@@ -31,7 +31,7 @@ public class Alumno {
 		Alumno alumno = new Alumno();
 		alumno.setToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMTEyMjIzMzMiLCJybmQiOiJ5SXNmZFIwN2lIR3BRRmVjYU9KT2VRPT0ifQ.9pVJGUXhrJPQ-TptNCt971l0h_1dWqWgMrHAWXJchho");
 		
-		System.out.print(alumno.datosAlumno());
+		System.out.print(alumno.datosAlumno().getEntity(String.class));
 		
 	}
 	
