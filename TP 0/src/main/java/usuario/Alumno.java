@@ -24,7 +24,7 @@ public class Alumno {
 		return token;
 	}
 	public void setToken(String token) {
-		this.token = "Bearer" + token;
+		this.token = "Bearer " + token;
 	}
 	public static void main(String[] args){
 		
