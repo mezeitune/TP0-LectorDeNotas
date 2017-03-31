@@ -8,14 +8,14 @@ import usuario.Alumno;
 @Observable
 public class TokenViewModel {
 	
-	private Alumno token;
+	private String token;
 
 
-	public Alumno getToken() {
+	public String getToken() {
 		return token;
 	}
 
-	public void setPrendaSeleccionada(Alumno token) {
+	public void setToken(String token) {
 		this.token = token;
 	}
 

@@ -23,7 +23,7 @@ public class IngresarToken extends Dialog<TokenViewModel>{
 		
 		new Label(form).setText("Ingrese su Token");
 		
-		new TextBox(form).setWidth(400).bindValueToProperty("Token");
+		new TextBox(form).setWidth(400).bindValueToProperty("token");
 		
 		
 	}
