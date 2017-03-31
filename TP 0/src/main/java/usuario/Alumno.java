@@ -25,7 +25,7 @@ public class Alumno {
 	public void setToken(String token) {
 		this.token = "Bearer " + token;
 	}
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		
 		Alumno alumno = new Alumno();
 		alumno.setToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMTEyMjIzMzMiLCJybmQiOiJ5SXNmZFIwN2lIR3BRRmVjYU9KT2VRPT0ifQ.9pVJGUXhrJPQ-TptNCt971l0h_1dWqWgMrHAWXJchho");
@@ -34,7 +34,7 @@ public class Alumno {
 		
 		System.out.print(alumno.datosAlumno().getEntity(String.class));
 		
-	}
+	}*/
 	
 	
 }

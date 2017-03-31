@@ -13,8 +13,8 @@ import ui.vm.TokenViewModel;
 @SuppressWarnings("serial")
 public class IngresarToken extends Dialog<TokenViewModel>{
 
-	public IngresarToken(WindowOwner owner) {
-		super(owner, new TokenViewModel());
+	public IngresarToken(WindowOwner parent) {
+		super(parent, new TokenViewModel());
 	}
 	@Override
 	protected void createFormPanel(Panel mainPanel) {
@@ -33,4 +33,5 @@ public class IngresarToken extends Dialog<TokenViewModel>{
 		
 	}
 	
+			
 }
