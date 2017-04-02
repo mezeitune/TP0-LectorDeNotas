@@ -1,5 +1,12 @@
 package ui.vm;
 
-public class PlanillaNotasViewModel {
+import org.uqbar.commons.utils.Observable;
 
+@Observable
+public class PlanillaNotasViewModel {
+	
+	public PlanillaNotasViewModel() {
+		super();
+	}
+	
 }

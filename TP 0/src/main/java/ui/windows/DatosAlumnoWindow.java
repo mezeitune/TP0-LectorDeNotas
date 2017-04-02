@@ -22,7 +22,7 @@ public class DatosAlumnoWindow extends Dialog<ViewModelImport> {
 	//donde dice "Json" va la clase del objeto string
 	/*
 	protected void createFormPanel(Panel formPanel) {
-		this.setTitle("TP0 - Datos Alumno");
+		this.setTitle("Datos Alumno");
 		
 		Table <Json> tableUsuario = new Table<Json>(formPanel, Json.class);
 		Column<Json> columnaLegajo = new Column<Json>(tableUsuario);
@@ -39,8 +39,21 @@ public class DatosAlumnoWindow extends Dialog<ViewModelImport> {
 		
 		tableUsuario.setHeight(500);
 		tableUsuario.setWidth(100);
+		
+	protected void addACtiones(Panel actions){
+		new Button(tableUsuario) 
+		.setCaption("Ver Notas");
+		.onClick(this::PlanillaNotasWindow);
+		}
+		
 	}*/
 
+	public void PlanillaNotasWindow() {
+		Dialog<?> dialog = new PlanillaNotasWindow(this); // Hay que definir el viewModel de PlanillaNotasWindow
+		dialog.open();
+		dialog.onAccept(() -> {});
+	}
+	
 	@Override
 	protected void createFormPanel(Panel mainPanel) {
 		// TODO Auto-generated method stub
