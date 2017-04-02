@@ -32,7 +32,7 @@ public class Alumno {
 
 
 	public String setCode(String code) {
-		return this.code = this.datosAlumno().optString("code");
+		return this.code = this.datosAlumno().optString("code");  
 	}
 
 

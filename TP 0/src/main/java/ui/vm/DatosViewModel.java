@@ -8,16 +8,16 @@ import repository.Repositorios;
 import usuario.Alumno;
 
 @Observable
-public class ViewModelImport {//Copiado de VentaViewModel practica-arena
+public class DatosViewModel{//Copiado de VentaViewModel practica-arena
 
 
 	private List<Alumno> alumnos;
 	private Alumno unAlumno;
 
-	public ViewModelImport() {
+	/*public ViewModelImport() {
 		this.alumnos = Repositorios.alumnos.all();
 	}
-
+*/
 	public Alumno getCode() {
 		return unAlumno;
 	}

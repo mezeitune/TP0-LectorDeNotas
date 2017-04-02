@@ -19,6 +19,7 @@ public class IngresarToken extends SimpleWindow<TokenViewModel>{
 	}
 	@Override
 	protected void createFormPanel(Panel mainPanel) {
+		this.setTitle("Sistema de calificaciones");
 		Panel form = new Panel(mainPanel);
 		form.setLayout(new ColumnLayout(2));
 		

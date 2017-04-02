@@ -1,5 +1,6 @@
 package ui.windows;
 
+import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.tables.Column;
 import org.uqbar.arena.widgets.tables.Table;
@@ -8,17 +9,16 @@ import org.uqbar.arena.windows.WindowOwner;
 
 import usuario.Alumno;
 
-import ui.vm.ViewModelImport;
+import ui.vm.DatosViewModel;
 
 
 @SuppressWarnings("serial")
-public class DatosAlumnoWindow extends Dialog<ViewModelImport> {
+public class DatosAlumnoWindow extends Dialog<DatosViewModel> {
 
 
 	public DatosAlumnoWindow(WindowOwner parent) {
-		super(parent, new ViewModelImport());
+		super(parent, new DatosViewModel());
 	}
-	//donde dice "Json" va la clase del objeto string
 	
 	protected void createFormPanel(Panel formPanel) {
 		this.setTitle("Datos Alumno");
@@ -45,30 +45,23 @@ public class DatosAlumnoWindow extends Dialog<ViewModelImport> {
 		
 		Column<Alumno> columnaGitHub = new Column<Alumno>(tableUsuario);
 		columnaGitHub.setTitle("Usuario GitHub").setFixedSize(150).bindContentsToProperty("git_user");
-		
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 	}
-	/*protected void addActions(Panel actions){
-		new Button(tableUsuario) 
-		.setCaption("Ver Notas");
-		.onClick(this::PlanillaNotasWindow);
-		}
+	
+	// Aca la navegacion hacia la otra ventana de notas esta bien seteada. Solo falta el view model de la Planilla, por eso tira error si se descomenta.
+	/*
+	@Override
+	protected void addActions(Panel actions){
+		new Button(actions).setCaption("Ver Notas").onClick(this::PlanillaNotasWindow);
 		
 	}
 
-	/*public void PlanillaNotasWindow() {
-		Dialog<?> dialog = new PlanillaNotasWindow(this); // Hay que definir el viewModel de PlanillaNotasWindow
+	public void PlanillaNotasWindow() {
+		Dialog<?> dialog = new PlanillaNotasWindow(this);
 		dialog.open();
 		dialog.onAccept(() -> {});
-	}*/
-	
-	/*@Override
-	protected void createFormPanel(Panel mainPanel) {
-		// TODO Auto-generated method stub
-		
 	}
 	*/
 	
-
 }
