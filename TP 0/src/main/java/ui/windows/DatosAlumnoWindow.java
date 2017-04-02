@@ -13,7 +13,7 @@ import ui.vm.ViewModelImport;
 
 
 @SuppressWarnings("serial")
-public abstract class DatosAlumnoWindow extends SimpleWindow<ViewModelImport> {
+public class DatosAlumnoWindow extends Dialog<ViewModelImport> {
 
 
 	public DatosAlumnoWindow(WindowOwner parent) {
@@ -40,4 +40,12 @@ public abstract class DatosAlumnoWindow extends SimpleWindow<ViewModelImport> {
 		tableUsuario.setHeight(500);
 		tableUsuario.setWidth(100);
 	}*/
+
+	@Override
+	protected void createFormPanel(Panel mainPanel) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 }
