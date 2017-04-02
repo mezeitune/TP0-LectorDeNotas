@@ -1,9 +1,33 @@
 package ui.vm;
 
-public class ViewModelImport {
+import java.util.List;
 
-		public ViewModelImport() {
-			super();
-		}
+import org.uqbar.commons.utils.Observable;
+
+import repository.Repositorios;
+import usuario.Alumno;
+
+@Observable
+public class ViewModelImport {//Copiado de VentaViewModel practica-arena
+
+
+	private List<Alumno> alumnos;
+	private Alumno unAlumno;
+
+	public ViewModelImport() {
+		this.alumnos = Repositorios.alumnos.all();
+	}
+
+	public Alumno getCode() {
+		return unAlumno;
+	}
+
+	public void setAlumnoSeleccionado(Alumno unAlumno) {
+		this.unAlumno = unAlumno;
+	}
+
+	public List<Alumno> getAlumnos() {
+		return alumnos;
+	}
 
 }

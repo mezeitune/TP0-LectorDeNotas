@@ -2,8 +2,6 @@ package ui.vm;
 
 import org.uqbar.commons.utils.Observable;
 
-import usuario.Alumno;
-
 
 @Observable
 public class TokenViewModel {

@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>uqbar-project.org</groupId>
-	<artifactId>conversor-ui-arena</artifactId>
+	<groupId>TP_0</groupId>
+	<artifactId>TP_0</artifactId>
 	<version>1.2-SNAPSHOT</version>
-	<name>conversor-ui-arena</name>
-	<description>Ejemplo más simple de una aplicación con Arena usando bindings.</description>
+	<name>TP_0</name>
+	<description>GET de datos Alumno mediante protocolo HTTP.</description>
 
 	<dependencies>
 		<dependency>

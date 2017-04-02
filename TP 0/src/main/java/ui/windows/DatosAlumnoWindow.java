@@ -1,10 +1,9 @@
 package ui.windows;
-import org.uqbar.arena.widgets.Button;
+
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.tables.Column;
 import org.uqbar.arena.widgets.tables.Table;
 import org.uqbar.arena.windows.Dialog;
-import org.uqbar.arena.windows.SimpleWindow;
 import org.uqbar.arena.windows.WindowOwner;
 
 import usuario.Alumno;
@@ -20,45 +19,56 @@ public class DatosAlumnoWindow extends Dialog<ViewModelImport> {
 		super(parent, new ViewModelImport());
 	}
 	//donde dice "Json" va la clase del objeto string
-	/*
+	
 	protected void createFormPanel(Panel formPanel) {
 		this.setTitle("Datos Alumno");
 		
-		Table <Json> tableUsuario = new Table<Json>(formPanel, Json.class);
-		Column<Json> columnaLegajo = new Column<Json>(tableUsuario);
-		columnaLegajo.setTitle("Numero Legajo");
+		Table <Alumno> tableUsuario = new Table<Alumno>(formPanel, Alumno.class);
+		tableUsuario.setHeight(800);
+		tableUsuario.setWidth(400);
+		tableUsuario.bindItemsToProperty("alumnos");
+		//tableUsuario.bindValueToProperty("unAlumno"); ROMPE TODO, pero sin esto no podemos agregar los datos a la tabla
 		
-		Column<Json> columnaNombre= new Column<Json>(tableUsuario);
-		columnaNombre.setTitle("Nombre");
+		///////////////Deberia bindear los campos con los datos alumno, pero por lo anterior no lo toma/////////////////
+		Column<Alumno> columnaLegajo = new Column<Alumno>(tableUsuario);
+		columnaLegajo.setTitle("Numero Legajo").setFixedSize(150).bindContentsToProperty("code");
 		
-		Column<Json> columnaApellido = new Column<Json>(tableUsuario);
-		columnaNombre.setTitle("Apellido");
 		
-		Column<Json> columnaGitHub = new Column<Json>(tableUsuario);
-		columnaNombre.setTitle("Usuario GitHub");
 		
-		tableUsuario.setHeight(500);
-		tableUsuario.setWidth(100);
+		Column<Alumno> columnaNombre= new Column<Alumno>(tableUsuario);
+		columnaNombre.setTitle("Nombre").setFixedSize(150).bindContentsToProperty("first_name");
 		
-	protected void addACtiones(Panel actions){
+		
+		Column<Alumno> columnaApellido = new Column<Alumno>(tableUsuario);
+		columnaApellido.setTitle("Apellido").setFixedSize(150).bindContentsToProperty("last_name");
+		
+		
+		Column<Alumno> columnaGitHub = new Column<Alumno>(tableUsuario);
+		columnaGitHub.setTitle("Usuario GitHub").setFixedSize(150).bindContentsToProperty("git_user");
+		
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+	}
+	/*protected void addActions(Panel actions){
 		new Button(tableUsuario) 
 		.setCaption("Ver Notas");
 		.onClick(this::PlanillaNotasWindow);
 		}
 		
-	}*/
+	}
 
-	public void PlanillaNotasWindow() {
+	/*public void PlanillaNotasWindow() {
 		Dialog<?> dialog = new PlanillaNotasWindow(this); // Hay que definir el viewModel de PlanillaNotasWindow
 		dialog.open();
 		dialog.onAccept(() -> {});
-	}
+	}*/
 	
-	@Override
+	/*@Override
 	protected void createFormPanel(Panel mainPanel) {
 		// TODO Auto-generated method stub
 		
 	}
+	*/
 	
-	
+
 }
