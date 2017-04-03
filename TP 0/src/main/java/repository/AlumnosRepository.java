@@ -7,10 +7,27 @@ import usuario.Alumno;
 
 public class AlumnosRepository {
 
-	private List<Alumno> alumnos = new ArrayList<>();
+	private static Alumno alumno ;
+	private String token;
 
-	public List<Alumno> all() {
-		return this.alumnos;
+	public static Alumno getAlumno() {
+    
+		if (alumno==null) {
+
+			alumno=new Alumno();
+		}
+
+		return alumno;
 	}
+	
+	public void setToken(String token){
+		 this.token=token;
+	}
+	
+	public String getToken(){
+		return this.token;
+	}
+
+	
 
 }

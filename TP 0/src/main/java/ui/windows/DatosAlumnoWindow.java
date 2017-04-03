@@ -1,7 +1,15 @@
 package ui.windows;
 
+import java.awt.Color;
+
+import org.uqbar.arena.bindings.PropertyAdapter;
+import org.uqbar.arena.layout.ColumnLayout;
+import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
+import org.uqbar.arena.widgets.Control;
+import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
+import org.uqbar.arena.widgets.Selector;
 import org.uqbar.arena.widgets.tables.Column;
 import org.uqbar.arena.widgets.tables.Table;
 import org.uqbar.arena.windows.Dialog;
@@ -23,28 +31,32 @@ public class DatosAlumnoWindow extends Dialog<DatosViewModel> {
 	protected void createFormPanel(Panel formPanel) {
 		this.setTitle("Datos Alumno");
 		
-		Table <Alumno> tableUsuario = new Table<Alumno>(formPanel, Alumno.class);
-		tableUsuario.setHeight(800);
-		tableUsuario.setWidth(400);
-		tableUsuario.bindItemsToProperty("alumnos");
-		//tableUsuario.bindValueToProperty("unAlumno"); ROMPE TODO, pero sin esto no podemos agregar los datos a la tabla
 		
-		///////////////Deberia bindear los campos con los datos alumno, pero por lo anterior no lo toma/////////////////
-		Column<Alumno> columnaLegajo = new Column<Alumno>(tableUsuario);
-		columnaLegajo.setTitle("Numero Legajo").setFixedSize(150).bindContentsToProperty("code");
+		formPanel.setLayout(new VerticalLayout());
+		formPanel.setWidth(500);
+
+		new Label(formPanel).setText("Codigo: ");
+		new Label(formPanel) //
+		.setBackground(Color.ORANGE)
+		.bindValueToProperty("code");
 		
+		new Label(formPanel).setText("Nombre: ");
+		new Label(formPanel) //
+		.setBackground(Color.ORANGE)
+		.bindValueToProperty("firstName");
 		
+		new Label(formPanel).setText("Apellido: ");
+		new Label(formPanel) //
+		.setBackground(Color.ORANGE)
+		.bindValueToProperty("lastName");
 		
-		Column<Alumno> columnaNombre= new Column<Alumno>(tableUsuario);
-		columnaNombre.setTitle("Nombre").setFixedSize(150).bindContentsToProperty("first_name");
+		new Label(formPanel).setText("Usuario de Git: ");
+		new Label(formPanel) //
+		.setBackground(Color.ORANGE)
+		.bindValueToProperty("gitUser");
 		
-		
-		Column<Alumno> columnaApellido = new Column<Alumno>(tableUsuario);
-		columnaApellido.setTitle("Apellido").setFixedSize(150).bindContentsToProperty("last_name");
-		
-		
-		Column<Alumno> columnaGitHub = new Column<Alumno>(tableUsuario);
-		columnaGitHub.setTitle("Usuario GitHub").setFixedSize(150).bindContentsToProperty("git_user");
+
+
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 	}

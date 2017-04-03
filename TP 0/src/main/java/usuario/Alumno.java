@@ -16,7 +16,12 @@ public class Alumno {
 	
 	
 	public JSONObject datosAlumno(){
-		return cliente.datos(token);
+		JSONObject c = cliente.datos(token);
+		this.code = cliente.datos(token).optString("code");
+		this.first_name = cliente.datos(token).optString("first_name");
+		this.last_name = cliente.datos(token).optString("last_name");
+		this.git_user = cliente.datos(token).optString("git_user");
+		return c;
 	}
 	
 	public String getToken() {
@@ -75,6 +80,7 @@ public class Alumno {
 		
 		
 		System.out.println(alumno.datosAlumno());
+		System.out.println(alumno.getCode());
 		
 	}*/
 
