@@ -11,7 +11,13 @@ public class Nota {
 	public int id;
 	public String titulo;
 	public String descripcion;
-	public JSONArray calificaciones;
+	public String calificaciones; /* Apa las papas aca. Momentaneamente es una decision sin seguridad. Hay que ver
+									 como pasar la lista de calificaciones del servidor al JSONObject.
+									 Defini esa lista de numeros, como un string, porque acuerdense que las notas
+									 pueden ser letras(Conceptuales) o numericas.
+									 No se si definiendolo como un string vamos a solucionar algo, pero habria
+									 que pensar esto mas adelante. Yo diria dejarlo pa lo ultimo, ya que en todo
+									 campo menos. Primero veamos de como bindear las cosas*/
 	RequestService cliente = new RequestService();
 	
 	public String token;
@@ -51,12 +57,13 @@ public class Nota {
 		this.descripcion =this.datosNota().optString("description");
 	}
 	
-	public JSONArray getCalificaciones(){
+	/* Aca esta el Par(Getter y Setter) del atributo calificaciones */
+	public String getCalificaciones(){
 		return calificaciones;
 	}
 	
 	public void setCalificaciones(JSONArray calificaciones){
-		this.calificaciones = this.datosNota().optJSONArray("grades");
+		this.calificaciones = this.datosNota().optJSONArray("grades").toString();
 	}
 }
 	/*
