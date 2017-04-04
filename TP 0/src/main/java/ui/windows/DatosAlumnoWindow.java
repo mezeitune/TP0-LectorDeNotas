@@ -13,45 +13,47 @@ import org.uqbar.arena.widgets.Selector;
 import org.uqbar.arena.widgets.tables.Column;
 import org.uqbar.arena.widgets.tables.Table;
 import org.uqbar.arena.windows.Dialog;
+import org.uqbar.arena.windows.MainWindow;
 import org.uqbar.arena.windows.WindowOwner;
+import org.uqbar.commons.utils.Observable;
 
-import usuario.Alumno;
+//import usuario.Alumno;
 
 import ui.vm.DatosViewModel;
 
-
-@SuppressWarnings("serial")
+//@SuppressWarnings("serial")
 public class DatosAlumnoWindow extends Dialog<DatosViewModel> {
 
+	private static final long serialVersionUID = 7070181265970638049L;
 
 	public DatosAlumnoWindow(WindowOwner parent) {
-		super(parent, new DatosViewModel());
+		super(parent ,new DatosViewModel());
 	}
 	
-	protected void createFormPanel(Panel formPanel) {
+	public void createFormPanel(Panel mainPanel) {
 		this.setTitle("Datos Alumno");
 		
 		
-		formPanel.setLayout(new VerticalLayout());
-		formPanel.setWidth(500);
+		mainPanel.setLayout(new VerticalLayout());
+		mainPanel.setWidth(500);
 
-		new Label(formPanel).setText("Codigo: ");
-		new Label(formPanel) //
+		new Label(mainPanel).setText("Codigo: ");
+		new Label(mainPanel) //
 		.setBackground(Color.ORANGE)
 		.bindValueToProperty("code");
 		
-		new Label(formPanel).setText("Nombre: ");
-		new Label(formPanel) //
+		new Label(mainPanel).setText("Nombre: ");
+		new Label(mainPanel) //
 		.setBackground(Color.ORANGE)
 		.bindValueToProperty("firstName");
 		
-		new Label(formPanel).setText("Apellido: ");
-		new Label(formPanel) //
+		new Label(mainPanel).setText("Apellido: ");
+		new Label(mainPanel) //
 		.setBackground(Color.ORANGE)
 		.bindValueToProperty("lastName");
 		
-		new Label(formPanel).setText("Usuario de Git: ");
-		new Label(formPanel) //
+		new Label(mainPanel).setText("Usuario de Git: ");
+		new Label(mainPanel) //
 		.setBackground(Color.ORANGE)
 		.bindValueToProperty("gitUser");
 		

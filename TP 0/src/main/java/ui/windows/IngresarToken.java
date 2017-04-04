@@ -1,18 +1,19 @@
 package ui.windows;
+
 import org.uqbar.arena.layout.ColumnLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.TextBox;
 import org.uqbar.arena.windows.Dialog;
-import org.uqbar.arena.windows.SimpleWindow;
+//import org.uqbar.arena.windows.SimpleWindow;
 import org.uqbar.arena.windows.WindowOwner;
 
-import repository.Repositorios;
+//import repository.Repositorios;
 import ui.vm.TokenViewModel;
 
 @SuppressWarnings("serial")
-public class IngresarToken extends SimpleWindow<TokenViewModel>{
+public class IngresarToken extends Dialog<TokenViewModel>{
 
 	public IngresarToken(WindowOwner parent) {
 		super(parent, new TokenViewModel());
@@ -41,7 +42,7 @@ public class IngresarToken extends SimpleWindow<TokenViewModel>{
 		Dialog<?> dialog = new DatosAlumnoWindow(this);
 		dialog.open();
 		dialog.onAccept(() -> {});
-}
+	}
 	
-			
+
 }

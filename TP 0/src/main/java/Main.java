@@ -11,7 +11,7 @@ public class Main extends Application{
 	}
 	
 	@Override
-	protected Window<?> createMainWindow() {
+	public Window<?> createMainWindow() {
 		return new IngresarToken(this);
 	}
 }

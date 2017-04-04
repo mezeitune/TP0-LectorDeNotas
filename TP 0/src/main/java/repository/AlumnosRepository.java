@@ -20,7 +20,7 @@ public class AlumnosRepository {
 		return alumno;
 	}
 	
-	public void setToken(String token){
+	/*public void setToken(String token){
 		 this.token=token;
 	}
 	
@@ -28,6 +28,6 @@ public class AlumnosRepository {
 		return this.token;
 	}
 
-	
+	*/
 
 }
